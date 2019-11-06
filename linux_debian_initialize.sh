@@ -35,7 +35,7 @@ mkdir original-pymvpa-tutorials
 # Reasoning: https://stackoverflow.com/questions/45023363/what-is-docker-io-in-relation-to-docker-ce-and-docker-ee
 # Even though the official docker docs use docker-ce, I choose to use docker.io because it seems easier to install
 # from a docker user P.O.V and it seems relatively up to date which is good enough for me.
-sudo apt install docker.io
+sudo apt install docker.io -y
 
 # Download docker image
 
