@@ -19,9 +19,9 @@ sudo apt upgrade -y # if prompted choose: install the package maintainer's versi
 # Create file directories for shared docker folder
 
 cd # go to home directory
-mkdir pymvpa-docker
+mkdir pymvpa-shared-folder
 
-cd pymvpa-docker
+cd pymvpa-shared-folder
 
 mkdir code
 mkdir fmri-data
