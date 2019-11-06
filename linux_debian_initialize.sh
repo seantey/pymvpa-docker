@@ -11,7 +11,7 @@
 # (3) Create the container
 # 
 
-# To remove alias, do...
+## To remove alias, do...
 
 sudo apt update -y
 sudo apt upgrade -y # if prompted choose: install the package maintainer's version
