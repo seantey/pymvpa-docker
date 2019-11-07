@@ -17,22 +17,11 @@ sudo apt update -y
 sudo apt upgrade --y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew
 
 # Create file directories for shared docker folder
-
-bash # launch sub shell so that we can go back to the original working directory easily
-cd # go to home directory
-mkdir -p pymvpa-mount-folder
-
-cd pymvpa-mount-folder
-
-mkdir -p pymvpa
-
-cd pymvpa
-mkdir -p code
-mkdir -p fmri-data
-mkdir -p sean-tutorials
-mkdir -p original-pymvpa-tutorials
-
-exit 0 # Go back to parent process and continue running this script
+mkdir -p ~/pymvpa-mount-folder
+mkdir -p ~/pymvpa-mount-folder/pymvpa/code
+mkdir -p ~/pymvpa-mount-folder/pymvpa/fmri-data
+mkdir -p ~/pymvpa-mount-folder/pymvpa/sean-tutorials
+mkdir -p ~/pymvpa-mount-folder/pymvpa/original-pymvpa-tutorials
 
 # Copy the home directory hidden files from template
 cp -r util/template/homefolder/. ~/pymvpa-mount-folder/
