@@ -3,10 +3,7 @@ FROM continuumio/anaconda2
 
 # Update debian packages in the container
 RUN apt update -y
-
-# Unattended install
-# Reference: https://unix.stackexchange.com/questions/22820/how-to-make-apt-get-accept-new-config-files-in-an-unattended-install-of-debian-f
-RUN apt upgrade -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew -y 
+RUN apt upgrade -y 
 
 # Install useful or required packages
 RUN apt install sudo -y

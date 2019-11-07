@@ -14,7 +14,7 @@
 ## To remove alias, do...
 
 sudo apt update -y
-sudo apt upgrade -y # if prompted choose: install the package maintainer's version
+sudo apt upgrade --y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew
 
 # Create file directories for shared docker folder
 
