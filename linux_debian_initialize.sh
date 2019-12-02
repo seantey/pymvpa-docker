@@ -87,6 +87,8 @@ fi
 
 
 # Run bashrc so that we can immediately use the new alias instead of logging in and out
+# Might still need to exit and reconnect ssh connection.
 source ~/.bashrc
 
 echo 'PyMVPA Docker initialization complete'
+echo 'To use the "launch-pymvpa" command alias, you might need to restart the terminal session by disconnecting and reconnecting the ssh connection.'
