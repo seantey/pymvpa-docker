@@ -15,7 +15,9 @@
 ## To remove alias, do...
 
 sudo apt update -y
+# Might still need to select keep local version installed when upgrading. # TODO see if there's a way to automatically select that.
 sudo apt upgrade -y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew
+
 
 # Create file directories for shared docker folder
 mkdir -p ~/pymvpa-mount-folder
@@ -52,7 +54,7 @@ sudo docker pull seantey/pymvpa-docker:latest
 ./util/docker_create_container.sh
 
 # Add the launch script to path, use the fact that /usr/local/bin is usually already in PATH enviroment
-cp util/pymvpa_docker_start.sh /usr/local/bin
+sudo cp util/pymvpa_docker_start.sh /usr/local/bin
 
 # # TODO this seems odd, why did I put an alias to downlaoded file instead of newly copied /bin file?
 # # Add alias for container launch script
