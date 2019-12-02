@@ -15,7 +15,7 @@
 ## To remove alias, do...
 
 sudo apt update -y
-sudo apt upgrade --y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew
+sudo apt upgrade -y -o Dpkg::Options::=--force-confdef -o Dpkg::Options::=--force-confnew
 
 # Create file directories for shared docker folder
 mkdir -p ~/pymvpa-mount-folder
