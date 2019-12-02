@@ -31,7 +31,9 @@ cp -r util/template/homefolder/. ~/pymvpa-mount-folder/
 
 # Generate a passwd and group file with uid and gid that matches the host so that
 # the shared folder permissions work for both host and container
-bash util/create_uid_gid_files.sh
+cd util # trying to ensure cross platform execution of script regardless of working directory seems a hassle.
+bash create_uid_gid_files.sh
+cd ..
 
 # Fetch the fMRI data from S3
 ## TODO
