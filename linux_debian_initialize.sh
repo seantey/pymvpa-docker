@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Assume the script is running on a linux (Ubuntu) machine on AWS but should work for personal
-# computers as well. This script does not work on any other operating system.
+# computers as well. This script probably does not work on most other operating systems.
 
 # Usage:
 
