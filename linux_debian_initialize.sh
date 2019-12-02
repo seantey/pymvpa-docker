@@ -11,6 +11,7 @@
 # (3) Create the container
 # 
 
+# TODO
 ## To remove alias, do...
 
 sudo apt update -y
@@ -53,23 +54,35 @@ sudo docker pull seantey/pymvpa-docker:latest
 # Add the launch script to path, use the fact that /usr/local/bin is usually already in PATH enviroment
 cp util/pymvpa_docker_start.sh /usr/local/bin
 
+# # TODO this seems odd, why did I put an alias to downlaoded file instead of newly copied /bin file?
+# # Add alias for container launch script
+# # First check if we are in the correct working directory and the launch script is exists
+# if [ -f "$(pwd)/util/pymvpa_docker_start.sh" ]
+# then
+#     # File exist
+#     if cat ~/.bashrc | grep -q 'alias launch-pymvpa='
+#     then
+#         echo 'Alias already exists in ~/.bashrc'
+#     else
+#         echo 'Adding launch-pymvpa shell alias to ~/.bashrc'
+#         echo "alias launch-pymvpa='$(pwd)/util/pymvpa_docker_start.sh'" >> ~/.bashrc
+#     fi
+# else
+#     # File does not exist
+#     echo 'WARNING script running in wrong working directory! Exiting script now.'
+#     exit 1
+# fi
+
+# TESTING alias to bin file
 # Add alias for container launch script
-# First check if we are in the correct working directory and the launch script is exists
-if [ -f "$(pwd)/util/pymvpa_docker_start.sh" ]
+if cat ~/.bashrc | grep -q 'alias launch-pymvpa='
 then
-    # File exist
-    if cat ~/.bashrc | grep -q 'alias launch-pymvpa='
-    then
-        echo 'Alias already exists in ~/.bashrc'
-    else
-        echo 'Adding launch-pymvpa shell alias to ~/.bashrc'
-        echo "alias launch-pymvpa='$(pwd)/util/pymvpa_docker_start.sh'" >> ~/.bashrc
-    fi
+    echo 'Alias already exists in ~/.bashrc'
 else
-    # File does not exist
-    echo 'WARNING script running in wrong working directory! Exiting script now.'
-    exit 1
+    echo 'Adding launch-pymvpa shell alias to ~/.bashrc'
+    echo "alias launch-pymvpa='/usr/local/bin/pymvpa_docker_start.sh'" >> ~/.bashrc
 fi
+
 
 # Run bashrc so that we can immediately use the new alias instead of logging in and out
 source ~/.bashrc
